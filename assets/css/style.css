@@ -3,6 +3,22 @@
     src: url('../fonts/RobotoMono-VariableFont_wght.ttf');
 }
 
+@font-face {
+    font-family: 'Graphik';
+    src: url('../fonts/GraphikMedium.otf');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+
+
+*{
+    margin: 0;
+    padding: 0; 
+}
+
 .header{
     background-color: #EAEAEA;
     padding-top: auto;
@@ -47,4 +63,138 @@
     border: none;
     background-color: transparent;
     background-image: url('../img/start-video-button.png');
+}
+
+/* ---------------------------------- */
+/* Hero section */
+.hero-section{
+    background-color: #EAEAEA;
+}
+
+.hero-container{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 133px;
+    align-items: center;
+}
+
+.information-div{
+    display: flex;
+    flex-direction: column;
+    padding-top: 92px;
+    padding-left: 12px;
+    justify-content: space-between;
+}
+
+.hero-subtitle{
+    font-family: 'Graphik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 14px;
+    letter-spacing: 0.1em;
+
+    color: #122438;
+}
+
+.main-title{
+    min-width: 384px;
+    height: 127px;
+    margin-top: 17px;
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 66px;
+    letter-spacing: 0.035em;
+
+    color: #000000;
+}
+
+.show-more-button{
+    max-width: 180px;
+    height: 50px;
+    background-color: #4670DE;
+    border-radius: 15px;
+    margin-top: 38px;
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    border: none;
+}
+
+.animation-div{
+    margin-top: 118px;
+    margin-left: 111px;
+}
+
+
+/* ---------------------------------- */
+/* About Section */
+.about-title{
+    text-align: center;
+    margin-top: 109px;
+}
+
+.about-section-content{
+    display: flex;
+    flex-direction: row;
+}
+
+.about-section-highlights-div{
+    margin-right: 62px;
+}
+
+.about-description{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 22px;
+
+    color: #555555;
+}
+
+.first-description{
+    margin-bottom: 13px;
+}
+
+.community-subtitle{
+    margin-top: 20px;
+    margin-bottom: 22px;
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 33px;
+    letter-spacing: 0.035em;
+
+    color: #000000;
+}
+
+.community-list{
+    padding-left: 30px;
+}
+
+.community-list-item{
+    padding-left: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #555555;   
+}
+
+.community-list-item:not(:last-child){
+    margin-bottom: 13px;
+}
+
+.about-section-community-we{
+    display: inline;
+    color: #4670DE;
 }
