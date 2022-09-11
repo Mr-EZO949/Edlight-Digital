@@ -6,19 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edlight Digital</title>
     <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <!-- <script src="main.js" defer></script> -->
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="menu-overlay">
-                <img class = "logo" src="assets/img/logo.png">
+                <img class = "logo" src="assets/img/logo.png" alt="">
                 <nav class = "navbar">
-                    <a class="navbar-item">ABOUT</a>
+                    <a class="navbar-item" href="">ABOUT</a>
                     <a class="navbar-item">TEAM</a>
                     <a class="navbar-item">SERVICES</a>
                 </nav>
-                <button class="video-button"></button>
+                <button class="video-button">j</button>
             </div>
         </div>
     </header>
@@ -27,7 +28,7 @@
             <div class="container hero-container">
                 <div class="information-div">
                     <h3 class="hero-subtitle">EDLIGHT DIGITAL</h3>
-                    <h1 class="main-title">EXCELLENCE IN EDUCATION</h1>
+                    <h1 class="main-title hero-title">EXCELLENCE IN EDUCATION</h1>
                     <button class="show-more-button">show more</button>
                 </div>
                 <div class="animation-div"> 
@@ -67,36 +68,43 @@
         </div>
         <div class="team-section">
             <div class="container">
-                <h1 class="main-title">TEAM</h1>
-                <h5 class="team-subtitle">Professionals in their field</h3>
+                <div class="team-title-content">
+					<div class="weird-circles margin-circle"></div>
+					<div class="weird-circles"></div>
+                    <h1 class="main-title team-title">TEAM</h1>
+                    <h5 class="team-subtitle">Professionals in their field</h3>
+					<div class="weird-circles margin-circle"></div>
+					<div class="weird-circles"></div>
+                </div>
+                
                 <ul class="team-list">
                     <li class="team-list-item">
-                        <img class="team-list-item-avatar" src="">
+                        <img class="team-list-item-avatar" src="./assets/img/trainer-photo.png" alt=""/>
                         <h4 class="team-list-item-name">Zhangir Ospan</h4>
                         <h5 class="team-list-item-field">Arduino trainer</h5>
                     </li>
                     <li class="team-list-item">
-                        <img class="team-list-item-avatar" src="">
+                        <img class="team-list-item-avatar" src="./assets/img/trainer-photo.png" alt="">
                         <h4 class="team-list-item-name">Zhangir Ospan</h4>
                         <h5 class="team-list-item-field">Arduino trainer</h5>
                     </li>
                     <li class="team-list-item">
-                        <img class="team-list-item-avatar" src="">
+                        <img class="team-list-item-avatar" src="./assets/img/trainer-photo.png" alt="">
                         <h4 class="team-list-item-name">Zhangir Ospan</h4>
                         <h5 class="team-list-item-field">Arduino trainer</h5>
                     </li>
                     <li class="team-list-item">
-                        <img class="team-list-item-avatar" src="">
+                        <img class="team-list-item-avatar" src="./assets/img/trainer-photo.png" alt="">
                         <h4 class="team-list-item-name">Zhangir Ospan</h4>
                         <h5 class="team-list-item-field">Arduino trainer</h5>
                     </li>
                     <li class="team-list-item">
-                        <img class="team-list-item-avatar" src="">
+                        <img class="team-list-item-avatar" src="./assets/img/trainer-photo.png" alt="">
                         <h4 class="team-list-item-name">Zhangir Ospan</h4>
                         <h5 class="team-list-item-field">Arduino trainer</h5>
                     </li>
                     <li class="team-list-item">
-                        <img class="team-list-item-avatar" src="">
+                        <img class="team-list-item-avatar" src="./assets/img/trainer-photo.png" alt="">
                         <h4 class="team-list-item-name">Zhangir Ospan</h4>
                         <h5 class="team-list-item-field">Arduino trainer</h5>
                     </li>
@@ -104,37 +112,148 @@
             </div>
         </div>
         <div class="services-section">
-            <div class="container">
-                <h1 class="main-title">SERVICES</h1>
-                <h4 class="services-section-subtitle">Areas we are advanced in</h4>
+            <div class="container services-container">
+                <h1 class="main-title services-title">SERVICES</h1>
+                <div class="services-section-subtitle">
+                    <img src="./assets/img/services-flag.png" alt="">
+                    <h4 class="services-section-subtitle-text">Areas we are advanced in</h4>
+                    <img src="./assets/img/services-flag.png" alt="">
+                </div>
+                
                 <ul class="services-list">
-                    <li class="services-list-item">
-                        <h1 class="services-list-heading">VR Dev</h1>
-                        <button class="services-explore-button">explore</button>
-                    </li>
-                    <li class="services-list-item">
+                    <li class="services-list-item Arduino">
                         <h1 class="services-list-heading">Arduino</h1>
                         <button class="services-explore-button">explore</button>
                     </li>
-                    <li class="services-list-item">
-                        <h1 class="services-list-heading">Chat bot</h1>
+                    <li class="services-list-item VR">
+                        <h1 class="services-list-heading">VR Dev</h1>
                         <button class="services-explore-button">explore</button>
                     </li>
-                    <li class="services-list-item">
-                        <h1 class="services-list-heading">Data science</h1>
+                    <li class="services-list-item Chatbot">
+                        <h1 class="services-list-heading">Chat Bot</h1>
                         <button class="services-explore-button">explore</button>
                     </li>
-                    <li class="services-list-item">
+                    <li class="services-list-item MobileDev">
                         <h1 class="services-list-heading">Mobile Dev</h1>
+                        <button class="services-explore-button">explore</button>
+                    </li>
+                    <li class="services-list-item DataScience">
+                        <h1 class="services-list-heading">Data Science</h1>
                         <button class="services-explore-button">explore</button>
                     </li>
                 </ul>
             </div>
             
         </div>
-        <div class="past-events">
-            <h1 clas="past-events-main-title">PAST EVENTS</h1>
-            <!-- Roadmap goes here -->
+        <div class="past-events-section">
+            <h1 clas="past-events-main-titl">PAST EVENTS</h1>
+            <ul>
+                <li>
+                    <div>
+                        <!--Use the time tag-->
+                      <time>2001</time> Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Incidunt nostrum quidem eius repudiandae nam, nemo fuga
+                      architecto possimus id at rem beatae consequuntur dolor commodi.
+                    </div>
+                </li>
+                  
+                <li>
+                  <div>
+                    <time>2001</time> Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Incidunt nostrum quidem eius repudiandae nam, nemo fuga
+                    architecto possimus id at rem beatae consequuntur dolor commodi.
+                  </div> 
+                </li>
+          
+                <li>
+                    <div>
+                      <time>2004</time> Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Incidunt nostrum quidem eius repudiandae nam, nemo fuga
+                      architecto possimus id at rem beatae consequuntur dolor commodi.
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                      <time>2006</time> Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Incidunt nostrum quidem eius repudiandae nam, nemo fuga
+                      architecto possimus id at rem beatae consequuntur dolor commodi.
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                      <time>2008</time> Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Incidunt nostrum quidem eius repudiandae nam, nemo fuga
+                      architecto possimus id at rem beatae consequuntur dolor commodi.
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                      <time>2010</time> Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Incidunt nostrum quidem eius repudiandae nam, nemo fuga
+                      architecto possimus id at rem beatae consequuntur dolor commodi.
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                      <time>2012</time> Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Incidunt nostrum quidem eius repudiandae nam, nemo fuga
+                      architecto possimus id at rem beatae consequuntur dolor commodi.
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                      <time>2014</time> Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Incidunt nostrum quidem eius repudiandae nam, nemo fuga
+                      architecto possimus id at rem beatae consequuntur dolor commodi.
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                      <time>2016</time> Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Incidunt nostrum quidem eius repudiandae nam, nemo fuga
+                      architecto possimus id at rem beatae consequuntur dolor commodi.
+                    </div>
+                </li>
+          
+                <li>
+                    <div>
+                      <time>2019</time> Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Incidunt nostrum quidem eius repudiandae nam, nemo fuga
+                      architecto possimus id at rem beatae consequuntur dolor commodi.
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                      <time>2020</time> This is a picture of my first hackathon.
+                      <img src="hero.png" alt="avatar"/>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                      <time>2021</time> Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Incidunt nostrum quidem eius repudiandae nam, nemo fuga
+                      architecto possimus id at rem beatae consequuntur dolor commodi.
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                      <time>2022</time> Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Incidunt nostrum quidem eius repudiandae nam, nemo fuga
+                      architecto possimus id at rem beatae consequuntur dolor commodi.
+                      \=lorem()
+
+                    </div>
+                </li>
+            </ul>
         </div>
     </main>
     <footer class="footer">

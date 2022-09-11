@@ -9,6 +9,11 @@
 }
 
 @font-face {
+    font-family: 'Graphik-Regular';
+    src: url('../fonts/GraphikRegular.otf');
+}
+
+@font-face {
     font-family: 'Roboto';
     src: url('../fonts/Roboto-Regular.ttf');
 }
@@ -19,6 +24,10 @@
     padding: 0; 
 }
 
+a{
+    text-decoration: none;
+}
+
 .header{
     background-color: #EAEAEA;
     padding-top: auto;
@@ -27,7 +36,9 @@
 
 .container{
     max-width: 995px;
-    margin: 0 auto
+    margin: 0 auto;
+    padding-left: 75px;
+    padding-right: 75px;
 }
 
 .menu-overlay{
@@ -65,6 +76,7 @@
     background-image: url('../img/start-video-button.png');
 }
 
+
 /* ---------------------------------- */
 /* Hero section */
 .hero-section{
@@ -97,10 +109,15 @@
     color: #122438;
 }
 
-.main-title{
+.hero-title{
     min-width: 384px;
-    height: 127px;
-    margin-top: 17px;
+    text-align: left !important;
+}
+
+.main-title{
+    /* min-width: 384px; */
+    /* height: 127px; */
+    /* margin-top: 17px; */
     font-family: 'Roboto Mono';
     font-style: normal;
     font-weight: 700;
@@ -197,4 +214,265 @@
 .about-section-community-we{
     display: inline;
     color: #4670DE;
+}
+
+
+/* ---------------------------------- */
+/* Team Section */
+
+.team-section{
+    margin-top: 173px;
+}
+
+.team-title-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-subtitle{
+    max-width: 181px;
+    margin-right: 40px;
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 25px;
+    letter-spacing: 0.035em;
+    color: #777777;
+}
+
+.team-title{
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 33px;
+}
+
+.weird-circles{
+    width: 20px;
+    height: 20px;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+    border-color: transparent;
+}
+
+.margin-circle{
+    margin-right: 10px; 
+}
+
+.team-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-left: 53px;
+    margin-top: 10px;
+}
+
+.team-list-item:not(:nth-child(3n)){
+    margin-right: 70px;
+}
+
+.team-list-item{
+    margin-bottom: 50px;   
+}
+
+.team-list-item-avatar{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin-bottom: 35px;
+    border-radius: 50%;
+    border: 5px solid #4670DE;
+    background-color: #F4F4F4;
+}
+
+.team-list-item-name{   
+    margin-bottom: 10px;
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.035em;
+    color: #000000;
+}
+
+.team-list-item-field{
+    font-family: 'Graphik-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+
+    letter-spacing: 0.02em;
+
+    color: #999999;
+}
+
+.main-title{
+    text-align: center;
+}
+
+
+/* Services Section */
+.services-section{
+    margin-top: 130px;
+}
+
+.services-title{
+    margin: 0;
+    padding: 0;
+}
+
+.services-section-subtitle-text{
+    margin-left: 17px;
+    margin-right: 17px;
+    height: 25px;
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 25px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: 0.035em;
+
+    color: #777777;
+}
+
+.services-section-subtitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.services-list{
+    margin-top: 37px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.services-list-item{
+    position: relative;
+    min-width: 1030px;
+    margin-bottom: 30px;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    overflow: hidden;
+    z-index: -1;
+    background-color: transparent;
+}
+
+.services-list-heading{
+    font-family: 'Roboto Mono';
+font-style: normal;
+font-weight: 500;
+font-size: 40px;
+line-height: 53px;
+text-align: center;
+letter-spacing: 0.035em;
+margin: 0;
+margin-bottom: 25px;
+
+color: #FFFFFF;
+}
+
+.services-explore-button{
+    padding: 12px 39px;
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0.03em;
+    background-color: transparent;
+    border: 3px solid #FFFFFF;
+    border-radius: 25px;
+    color: #FFFFFF;
+    transition-property: background-color, color, border-color;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+    
+}
+
+.services-explore-button:hover{
+    cursor: pointer;
+    background-color: #fff;
+    color: #777777;
+    border-color: #777777;
+}
+
+.VR{
+    background-image: url("../img/Vr-bg.png");
+    min-height: 100%;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center bottom;
+background-size: cover; 
+}
+
+.Arduino{
+    background-image: url("../img/Arduino-bg.png");
+    min-height: 100%;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center top;
+background-size: cover; 
+}
+
+.Chatbot{
+    background-image: url("../img/chatbot-bg.png");
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top;
+    background-size: cover; 
+}
+
+.DataScience{
+    background-image: url("../img/Datascience-bg.png");
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top;
+    background-size: cover;    
+    background-blend-mode: darken;
+    background-color: rgba(85, 85, 85, 0.3);
+}
+
+.MobileDev{
+    background-image: url("../img/Mobile-bg.png");
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top;
+    background-size: cover;    
+    background-blend-mode: darken;
+    background-color: rgba(85, 85, 85, 0.3);
+}
+
+/* Past Events */
+.past-events-main-title{
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 53px;
+    text-align: center;
+    letter-spacing: 0.05em;
+
+    color: #214670 ;
 }
