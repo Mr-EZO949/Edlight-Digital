@@ -75,9 +75,37 @@ a{
     border: none;
     background-color: transparent;
     background-image: url('../img/start-video-button.png');
+    transition: transform 0.25s ease-in-out;
 }
 
+.video-button:hover{
+    transform: scale(1.1);
+    transform: translateY(-7px);
+    cursor: pointer;
+}
 
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+  }
+  
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: #4670DE;
+    transform-origin: bottom right;
+    transition: transform 0.4s ease-out;
+}
+
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 /* ---------------------------------- */
 /* Hero section */
 .hero-section{
@@ -153,6 +181,16 @@ a{
     letter-spacing: 0.03em;
     color: #FFFFFF;
     border: none;
+    transition-property: border color background-color;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+}
+
+.show-more-button:hover{
+    cursor: pointer;
+    border: #4670DE 1px solid;
+    color: #4670DE;
+    background-color: #fff;
 }
 
 .animation-div{
@@ -291,10 +329,6 @@ a{
     margin-bottom: 50px;   
     transition: transform ease-out ;
 }
-
-
-
-
 
 .team-list-item-avatar{
     display: flex;
@@ -527,10 +561,13 @@ background-size: cover;
     line-height: 53px;
     text-align: center;
     letter-spacing: 0.05em;
-
+    z-index: 3;
     color: #214670 ;
 }
 
+#myHeader{
+    z-index: 3;
+}
 
 .past-events-section{
     margin-top: 100px;
@@ -599,7 +636,7 @@ background-size: cover;
     font-size: 1.2rem;
     position: relative;
     bottom: 0;
-    padding: 1.5rem;
+    padding: 0.7rem;
     /*glassmorphism effect*/
     background: rgba(255,255,255,.2);
     -webkit-backdrop-filter: blur(5px);
@@ -645,7 +682,7 @@ background-size: cover;
     max-width: 80%;
     max-height: 150px;
     border-radius: 30px;
-    margin-top: 20px;
+    /* margin-top: 10px; */
     margin-left: auto;
     margin-right: auto;
     transform: rotate(6deg);
@@ -668,7 +705,7 @@ time {
     display: block;
     font-size: 1.5rem;
     font-weight: 800;
-    margin-bottom: 17px;
+    margin-bottom: 15px;
     /* margin-top: 10px; */
 }
 
@@ -706,6 +743,7 @@ time {
     opacity: 1;
 }
 
+
 /* Tablet Width */
 @media screen and (max-width: 900px) {
     .timeline-section ul li div {
@@ -736,4 +774,96 @@ time {
       border-width: 8px 16px 8px 0;
       border-color: transparent var(--light-blue) transparent transparent;
     }
+}
+
+/* footer */
+.footer{
+    background-color: #122438;
+    min-height: 322px;
+}
+
+.footer-lists-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #fff;
+}
+
+
+.footer-list{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    list-style: none;
+    margin-top: 50px;
+}
+
+.footer-list li{
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+
+    color: #E9E9E9;
+}
+
+.footer-list-header{
+    margin-bottom: 22px;
+    cursor: default !important;
+}
+
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-list-heading{
+    font-family: 'Roboto Mono';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 21px;
+letter-spacing: 0.035em;
+
+color: #FFFFFF;
+}
+
+.contacts-list-item:not(:last-child){
+    margin-bottom: 20px;
+}
+
+.course-list-item:not(:last-child){
+    margin-bottom: 15px;
+}
+
+.events-list-item:not(:last-child){
+    margin-bottom: 15px;
+}
+
+.footer-list:not(:last-child){
+    margin-right: 100px;
+}
+
+.copyright{
+    max-width: 288px;
+    margin-top: 35px;
+    margin-bottom: 33px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.035em;
+
+    color: rgba(233, 233, 233, 0.86);
+}
+
+.footer-list li:hover{
+    cursor:pointer;
+    
 }

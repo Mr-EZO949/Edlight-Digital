@@ -15,9 +15,9 @@
             <div class="menu-overlay">
                 <img class = "logo" src="assets/img/logo.png" alt="">
                 <nav class = "navbar">
-                    <a class="navbar-item" href="">ABOUT</a>
-                    <a class="navbar-item">TEAM</a>
-                    <a class="navbar-item">SERVICES</a>
+                    <a class="navbar-item hover-underline-animation" href="">ABOUT</a>
+                    <a class="navbar-item hover-underline-animation" href="">TEAM</a>
+                    <a class="navbar-item hover-underline-animation" href="">SERVICES</a>
                 </nav>
                 <button class="video-button"></button>
             </div>
@@ -80,8 +80,8 @@
                 <ul class="team-list">
                     <li class="team-list-item">
                         <img class="team-list-item-avatar" src="./assets/img/trainer-photo.png" alt=""/>
-                                <h4 class="team-list-item-name">Zhangir Ospan</h4>
-                                <h5 class="team-list-item-field">Arduino trainer</h5>
+                        <h4 class="team-list-item-name">Zhangir Ospan</h4>
+                        <h5 class="team-list-item-field">Arduino trainer</h5>
                     </li>
                     <li class="team-list-item">
                         <img class="team-list-item-avatar" src="./assets/img/trainer-photo.png" alt="">
@@ -147,7 +147,9 @@
         </div>
         <div class="divider div-transparent div-arrow-down"></div>
         <div class="past-events-section">
-            <h1 class="past-events-title">PAST EVENTS</h1>
+            <div id="myHeader">
+                <h1 class="past-events-title">PAST EVENTS</h1>
+            </div>
             <div class="timeline-section">
                 <ul class="timeline">
                     <li class="timeline-item">
@@ -157,8 +159,9 @@
                     </li>
                     <li class="timeline-item">
                         <div class="hackathon">
-                            <time>2021</time>Hackathon #1 Lorem ipsum dolor sit amet consectetur adipitio porro repellat expedita? Fugit beatae, a quia quaerat ea ullam, animi quod, id eius 
+                            <time>2021 January</time>Hackathon #1 Lorembeatae, a quia quaerat ea ullam, animi quod, id eius 
                             <!-- <img class="img-hackathon" src="./assets/img/Arduino-bg.png" alt=""> -->
+                            <!-- <img class="img-hackathon" src="./assets/img/hackathon-pic1.png" alt=""> -->
                         </div>
                         
                     </li>
@@ -170,9 +173,8 @@
                     </li>
                     <li>
                         <div class="hackathon">
-                          <time>2004</time> Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Incidunt nostrum quidem eius repudiandae nam, nemo fuga
-                          architecto possimus id at rem beatae consequuntur dolor commodi.
+                          <time>2004</time> Lorem ipsum dolor sit amet consectetur a
+                          <!-- <img class="img-hackathon" src="./assets/img/hackathon-pic1.png" alt=""> -->
                         </div>
                     </li>
                 </ul>
@@ -181,30 +183,36 @@
         </div>
     </main>
     <footer class="footer">
-        <div class="container">
-            <ul class="contacts-list">
-                <li class="contacts-list-item">academy@edlight.kz</li>
-                <li class="contacts-list-item">8 (702) 690 27-37</li>
-                <li class="contacts-list-item">Nur-Sultan, Koshkarbaev st 11/2.</li>
-            </ul>
-            <ul class="courses-list">
-                <li class="course-list-item">IELTS Camps</li>
-                <li class="course-list-item">IT Departments</li>
-                <li class="course-list-item">KBO camps, olympiad</li>
-                <li class="course-list-item">Olympiad marathons</li>
-                <li class="course-list-item">SAT Camps</li>
-            </ul>
-            <ul class="events-list">
-                <li class="events-list-item">ledsfds</li>
-                <li class="events-list-item">ledsfds</li>
-            </ul>
-            <ul class="social-media-list">
-                <li class="social-media-list-item">
-                    <a href="instagram.com" class="social-media-link"></a>
-                    <a href="youtube.com" class="social-media-link"></a>
-                    <a href="facebook.com" class="social-media-link"></a>
-                </li>
-            </ul>
+        <div class="container footer-container">
+            <div class="footer-lists-wrapper">
+                <ul class="contacts-list footer-list">
+                    <li class="contacts-list-item footer-list-header"><h1 class="footer-list-heading">Contacts</h1></li>
+                    <li class="contacts-list-item">academy@edlight.kz</li>
+                    <li class="contacts-list-item">8 (702) 690 27-37</li>
+                    <li class="contacts-list-item">Nur-Sultan, Koshkarbaev st 11/2.</li>
+                </ul>
+                <ul class="courses-list footer-list">
+                    <li class="course-list-item footer-list-header"><h1 class="footer-list-heading">Courses</h1></li>
+                    <li class="course-list-item">IELTS Camps</li>
+                    <li class="course-list-item">IT Departments</li>
+                    <li class="course-list-item">KBO camps, olympiad</li>
+                    <li class="course-list-item">Olympiad marathons</li>
+                    <li class="course-list-item">SAT Camps</li>
+                </ul>
+                <ul class="events-list footer-list">
+                    <li class="events-list-item footer-list-header"><h1 class="footer-list-heading">Events</h1></li>
+                    <li class="events-list-item">ledsfds</li>
+                    <li class="events-list-item">LMAOOOO</li>
+                </ul>
+                <ul class="social-media-list">
+                    <li class="social-media-list-item">
+                        <a href="instagram.com" class="social-media-link"></a>
+                        <a href="youtube.com" class="social-media-link"></a>
+                        <a href="facebook.com" class="social-media-link"></a>
+                    </li>
+                </ul>
+            </div>
+            
             <p class="copyright">2022 copyright edlight digital. all rights reserved</p>
         </div>
     </footer>
