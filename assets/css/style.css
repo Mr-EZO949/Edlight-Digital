@@ -39,6 +39,7 @@ a{
     margin: 0 auto;
     padding-left: 75px;
     padding-right: 75px;
+    /* text-align: center; */
 }
 
 .menu-overlay{
@@ -105,8 +106,18 @@ a{
     font-size: 13px;
     line-height: 14px;
     letter-spacing: 0.1em;
-
+    text-align: left;
+    margin-left: 5px;
     color: #122438;
+}
+
+.line{
+    display: inline-block;
+    background: #000;
+    min-width: 100px;
+    height: 1px;
+    margin-bottom: 3px;
+    margin-left: 17px;
 }
 
 .hero-title{
@@ -129,8 +140,8 @@ a{
 }
 
 .show-more-button{
-    max-width: 180px;
-    height: 50px;
+    max-width: 220px;
+    height: 60px;
     background-color: #4670DE;
     border-radius: 15px;
     margin-top: 38px;
@@ -167,6 +178,7 @@ a{
 }
 
 .about-description{
+    min-width: 493px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -262,6 +274,7 @@ a{
 }
 
 .team-list{
+    min-width:900px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -276,7 +289,12 @@ a{
 
 .team-list-item{
     margin-bottom: 50px;   
+    transition: transform ease-out ;
 }
+
+
+
+
 
 .team-list-item-avatar{
     display: flex;
@@ -353,7 +371,7 @@ a{
 }
 
 .services-list{
-    margin-top: 37px;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -363,16 +381,16 @@ a{
 
 .services-list-item{
     position: relative;
-    min-width: 1030px;
-    margin-bottom: 30px;
-    height: 230px;
+    min-width: 1920px;
+    /* margin-bottom: 30px; */
+    height: 1000px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 30px;
+    /* border-radius: 30px; */
     overflow: hidden;
-    z-index: -1;
+
     background-color: transparent;
 }
 
@@ -380,7 +398,7 @@ a{
     font-family: 'Roboto Mono';
 font-style: normal;
 font-weight: 500;
-font-size: 40px;
+font-size: 50px;
 line-height: 53px;
 text-align: center;
 letter-spacing: 0.035em;
@@ -403,17 +421,18 @@ color: #FFFFFF;
     border-radius: 25px;
     color: #FFFFFF;
     transition-property: background-color, color, border-color;
-    transition-duration: 2s;
-    transition-timing-function: ease-in-out;
-    
+    transition-duration: .5s;
+    transition-timing-function: ease;
+    z-index: 10;
 }
 
 .services-explore-button:hover{
-    cursor: pointer;
+    cursor: pointer !important;
     background-color: #fff;
     color: #777777;
     border-color: #777777;
 }
+
 
 .VR{
     background-image: url("../img/Vr-bg.png");
@@ -464,8 +483,43 @@ background-size: cover;
     background-color: rgba(85, 85, 85, 0.3);
 }
 
+.divider
+{
+	position: relative;
+	margin-top: 100px;
+	height: 1px;
+}
+
+.div-transparent:before
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 5%;
+	right: 5%;
+	width: 90%;
+	height: 1px;
+	background-image: linear-gradient(to right, transparent, #77777777, transparent);
+}
+
+.div-arrow-down:after
+{
+	content: "";
+	position: absolute;
+	z-index: 1;
+	top: -7px;
+	left: calc(50% - 7px);
+	width: 14px;
+	height: 14px;
+	transform: rotate(45deg);
+	background-color: white;
+	border-bottom: 1px solid #77777777;
+	border-right: 1px solid #77777777;
+}
+
+
 /* Past Events */
-.past-events-main-title{
+.past-events-title{
     font-family: 'Roboto Mono';
     font-style: normal;
     font-weight: 700;
@@ -475,4 +529,211 @@ background-size: cover;
     letter-spacing: 0.05em;
 
     color: #214670 ;
+}
+
+
+.past-events-section{
+    margin-top: 100px;
+}
+
+:root {
+    --white: #fff;
+    --light-blue: lightblue;
+    --color-blue: #4670DE;
+    --color-dark-grey: #222831;
+}
+
+.timeline-section {
+    width: 100%;
+    overflow: hidden;  /* creates block formatting context */
+}
+
+.timeline-section ul {
+    /* background: var(--light-blue); */
+    padding: 5rem 0; /* padding top and bottom 5rem */
+}
+
+.timeline-item{
+    margin: 0;
+}
+
+/*styling the liSt*/
+.timeline-section ul li {
+    list-style: none;
+    position: relative;
+    width: 5px; /* set width to 5px then set background to lightblue for that width */
+    margin: 0 auto; /* center text */
+    
+    padding-top: 5rem; /* separate each list with a padding-top of 5rem = 5 x 10px= 50px */
+    background: var(--color-blue);
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 25px;
+    text-align: left;
+    letter-spacing: 0.035em;
+
+    color: #333333;
+}
+
+/*use pseudo elements to style*/
+/*This section will help us make the node-like structure - The circle*/
+.timeline-section ul li::after {
+    content: "";/* The content attribute is required for pseudo-elements to render */
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: inherit; /* inherits this property from its parent element */
+}
+
+
+/* Content box */
+.timeline-section ul li div {
+    min-width: 500px;
+    max-height: 80px;
+    font-size: 1.2rem;
+    position: relative;
+    bottom: 0;
+    padding: 1.5rem;
+    /*glassmorphism effect*/
+    background: rgba(255,255,255,.2);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    border-left: 2px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    border-right: 2px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Triangle */
+.timeline-section ul li div::before {
+    content: "";
+    position: absolute;
+    bottom: 7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+/*This is to select the divs at odd position so we can separate the divs to the right part*/
+.timeline-section ul li:nth-child(odd) div {
+    left: 45px;  /* this style pushes the divs at odd number position to the right */
+}
+  
+/*this showcases the triangle*/
+.timeline-section ul li:nth-child(odd) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent var(--light-blue) transparent transparent;
+}
+ 
+/*This is to select the divs at even number position so we can separate the divs to the left part*/
+.timeline-section ul li:nth-child(even) div {
+    left: -600px;
+}
+
+.img-hackathon{
+    display: block;
+    max-width: 80%;
+    max-height: 150px;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: rotate(6deg);
+}
+/* .hackathon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+} */
+/*this showcases the triangle*/
+.timeline-section ul li:nth-child(even) div::before {
+    right: -15px;
+    border-width: 8px 0 8px 16px;
+    border-color: transparent transparent transparent var(--light-blue); 
+}
+
+/*style the time tag*/
+time {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 17px;
+    /* margin-top: 10px; */
+}
+
+.timeline-section ul li::after {
+    transition: all 0.5s ease-in-out;
+}  
+
+ 
+/*this changes the node content..giving it a background of white and making the border thicker*/
+.timeline-section ul li.slide-in::after {
+    background: var(--white);
+    border: 3px solid var(--light-blue);
+}
+
+/* Hide event card initially */
+.timeline-section ul li div {
+    max-height: 250px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+  
+.timeline-section ul li:nth-child(odd) div {
+    transform: translateX(20rem);
+}
+
+.timeline-section ul li:nth-child(even) div {
+    transform: translateX(-20rem);
+}
+
+/* display the event card */
+.timeline-section ul li.slide-in div {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Tablet Width */
+@media screen and (max-width: 900px) {
+    .timeline-section ul li div {
+      width: 25rem;
+   }
+
+.timeline-section ul li:nth-child(even) div {
+      left: -289px;
+    }
+}
+
+/* Mobile width */
+@media screen and (max-width: 600px) {
+    .timeline-section ul li {
+      margin-left: 2rem;
+    }
+  
+    .timeline-section ul li div {
+      width: calc(100vw - 91px);
+    }
+  
+    .timeline-section ul li:nth-child(even) div {
+      left: 45px;
+    }
+  
+    .timeline-section ul li:nth-child(even) div::before {
+      left: -15px;
+      border-width: 8px 16px 8px 0;
+      border-color: transparent var(--light-blue) transparent transparent;
+    }
 }
