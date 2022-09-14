@@ -39,7 +39,12 @@ a{
     margin: 0 auto;
     padding-left: 75px;
     padding-right: 75px;
+    /* overflow: hidden; */
     /* text-align: center; */
+}
+
+.section{
+    overflow: hidden;
 }
 
 .menu-overlay{
@@ -415,7 +420,8 @@ a{
 
 .services-list-item{
     position: relative;
-    min-width: 1920px;
+    width: 1920px;
+    overflow-x: hidden;
     /* margin-bottom: 30px; */
     height: 1000px;
     display: flex;
@@ -631,7 +637,7 @@ background-size: cover;
 
 /* Content box */
 .timeline-section ul li div {
-    min-width: 500px;
+    width: 500px;
     max-height: 80px;
     font-size: 1.2rem;
     position: relative;
@@ -674,7 +680,7 @@ background-size: cover;
  
 /*This is to select the divs at even number position so we can separate the divs to the left part*/
 .timeline-section ul li:nth-child(even) div {
-    left: -600px;
+    left: -565px;
 }
 
 .img-hackathon{
@@ -705,7 +711,7 @@ time {
     display: block;
     font-size: 1.5rem;
     font-weight: 800;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
     /* margin-top: 10px; */
 }
 
@@ -718,6 +724,10 @@ time {
 .timeline-section ul li.slide-in::after {
     background: var(--white);
     border: 3px solid var(--light-blue);
+}
+
+.timeline-section ul li div p{
+    text-align: center;
 }
 
 /* Hide event card initially */
@@ -744,37 +754,7 @@ time {
 }
 
 
-/* Tablet Width */
-@media screen and (max-width: 900px) {
-    .timeline-section ul li div {
-      width: 25rem;
-   }
 
-.timeline-section ul li:nth-child(even) div {
-      left: -289px;
-    }
-}
-
-/* Mobile width */
-@media screen and (max-width: 600px) {
-    .timeline-section ul li {
-      margin-left: 2rem;
-    }
-  
-    .timeline-section ul li div {
-      width: calc(100vw - 91px);
-    }
-  
-    .timeline-section ul li:nth-child(even) div {
-      left: 45px;
-    }
-  
-    .timeline-section ul li:nth-child(even) div::before {
-      left: -15px;
-      border-width: 8px 16px 8px 0;
-      border-color: transparent var(--light-blue) transparent transparent;
-    }
-}
 
 /* footer */
 .footer{
@@ -866,4 +846,36 @@ color: #FFFFFF;
 .footer-list li:hover{
     cursor:pointer;
     
+}
+
+/* Tablet Width */
+@media screen and (max-width: 1200px) {
+    .timeline-section ul li div {
+      width: 400px;
+   }
+
+.timeline-section ul li:nth-child(even) div {
+      left: -470px;
+    }
+}
+
+/* Mobile width */
+@media screen and (max-width: 950px) {
+    .timeline-section ul li {
+      margin-left: 2rem;
+    }
+  
+    .timeline-section ul li div {
+      width: calc(100vw - 110px);
+    }
+  
+    .timeline-section ul li:nth-child(even) div {
+      left: 45px;
+    }
+  
+    .timeline-section ul li:nth-child(even) div::before {
+      left: -15px;
+      border-width: 8px 16px 8px 0;
+      border-color: transparent var(--light-blue) transparent transparent;
+    }
 }
