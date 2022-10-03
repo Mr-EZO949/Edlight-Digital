@@ -18,6 +18,22 @@
     src: url('../fonts/Roboto-Regular.ttf');
 }
 
+@font-face {
+    font-family: 'Roboto-Italic';
+    src: url('../fonts/Roboto-Italic.ttf');
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    color: #fff;
+}
+
+a:visited{
+    /* color: #fff; */
+}
 
 *{
     margin: 0;
@@ -59,6 +75,44 @@ a{
     margin-top: 10px;
 }
 
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
 .navbar-item{
     font-family: 'Roboto Mono';
     font-style: normal;
@@ -194,8 +248,16 @@ a{
 .show-more-button:hover{
     cursor: pointer;
     border: #4670DE 1px solid;
-    color: #4670DE;
+    color: #4670DE !important;
     background-color: #fff;
+}
+
+.show-more-button a{
+    display: block;;
+}
+
+.show-more-button:hover a{
+    color: #4670DE !important;
 }
 
 .animation-div{
@@ -209,6 +271,11 @@ a{
 .about-title{
     text-align: center;
     margin-top: 109px;
+}
+
+.about-section{
+    scroll-behavior: smooth;
+
 }
 
 .about-section-content{
@@ -317,12 +384,12 @@ a{
 }
 
 .team-list{
-    min-width:900px;
+    min-width: 1200px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     list-style: none;
-    margin-left: 53px;
+    margin-left: -50px;
     margin-top: 10px;
 }
 
@@ -331,11 +398,87 @@ a{
 }
 
 .team-list-item{
-    margin-bottom: 50px;   
+    max-width: 320px;
+    margin-bottom: 40px;
     transition: transform ease-out ;
 }
 
+
+.team-list-item-quote{
+    margin-top: -20px;
+    max-width: 300px;
+    margin-left: 20px;
+    text-align: center;
+    font-family: 'Roboto-Italic';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    /* identical to box height */
+
+    letter-spacing: 0.02em;
+
+    color: #404040;
+}
+
+.trainer-avatar{
+    position: relative;
+    padding: 0;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.trainer-avatar:hover{
+    cursor: default;
+}
+
+.trainer-avatar-content{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    background-color: rgba(70, 112, 222, 0.75);
+;
+    border-radius: 50%;
+    width: 100%;
+    height: 90%;
+    -webkit-transition: all 400ms ease-out;
+    -moz-transition: all 400ms ease-out;
+    -o-transition: all 400ms ease-out;
+    -ms-transition: all 400ms ease-out;
+    transition: all 400ms ease-out;
+    text-align: center;
+}
+
+.trainer-avatar-content:hover{
+    opacity: 1;
+    cursor: default;
+    border-color:rgba(70, 112, 222, 0.85);
+
+}
+
+.trainer-avatar-text{
+    max-width: 319px;
+    height: 0;
+    text-align: center;;
+    opacity: 1;
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    /* color: #4670DE; */
+}
+
+.trainer-avatar-content:hover .trainer-avatar-text{
+    opacity: 1;
+    transform: translateY(130px);
+    -webkit-transform: translateY(130px);
+    
+}
+
 .team-list-item-avatar{
+    min-width: 300px;
     display: flex;
     flex-direction: column;
     padding: 5px;
@@ -346,28 +489,28 @@ a{
 }
 
 .team-list-item-name{   
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-family: 'Roboto Mono';
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 24px;
     line-height: 26px;
     text-align: center;
     letter-spacing: 0.035em;
-    color: #000000;
+    color: #fff;
 }
 
 .team-list-item-field{
     font-family: 'Graphik-Regular';
     font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
+    /* font-weight: 800; */
+    font-size: 17px;
     line-height: 20px;
     text-align: center;
-
+    opacity: 0.8;
     letter-spacing: 0.02em;
 
-    color: #999999;
+    color: #fff;
 }
 
 .main-title{
@@ -430,22 +573,20 @@ a{
     justify-content: center;
     /* border-radius: 30px; */
     overflow: hidden;
-
     background-color: transparent;
 }
 
 .services-list-heading{
     font-family: 'Roboto Mono';
-font-style: normal;
-font-weight: 500;
-font-size: 50px;
-line-height: 53px;
-text-align: center;
-letter-spacing: 0.035em;
-margin: 0;
-margin-bottom: 25px;
-
-color: #FFFFFF;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 53px;
+    text-align: center;
+    letter-spacing: 0.035em;
+    margin: 0;
+    margin-bottom: 25px;
+    color: #FFFFFF;
 }
 
 .services-explore-button{
@@ -460,10 +601,12 @@ color: #FFFFFF;
     border: 3px solid #FFFFFF;
     border-radius: 25px;
     color: #FFFFFF;
+    background-attachment: fixed;
     transition-property: background-color, color, border-color;
     transition-duration: .5s;
     transition-timing-function: ease;
     z-index: 10;
+    /* transform: scale(1); */
 }
 
 .services-explore-button:hover{
@@ -471,25 +614,129 @@ color: #FFFFFF;
     background-color: #fff;
     color: #777777;
     border-color: #777777;
+    
 }
 
+.accordion__content{
+    margin-top: -50px;
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height 1s ease;
+}
+
+.accordion-content-text{
+    /* min-height: 280px; */
+    font-family: 'Roboto';
+    margin-top: -20px;
+    margin-bottom: 30px;
+    font-style: normal;
+    text-align: center;;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: 0.035em;
+    color: #122438;
+}
+
+
+
+.services-list-item--active{
+    transition-property: transform, border-radius;
+    /* background-attachment: fixed; */
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transform: scale(0.8);
+    border-radius: 20%;
+}
+
+.services-list-item--closed{
+    /* position: relative; */
+    transition-property: transform, border-radius;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    
+    border-radius: 0;
+    -webkit-background-size: cover !important;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+background-attachment: fixed !important;
+/* position: static !important; */
+/* z-index: -1 !important; */
+
+width: 1920px;
+    overflow-x: hidden;
+    /* margin-bottom: 30px; */
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border-radius: 30px; */
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.services-list-item--closed .Arduino{
+    background-image: url("../img/Arduino-bg.png") !important;
+    min-height: 100%;
+background-repeat: no-repeat;
+background-attachment: fixed !important;
+background-position: center top;
+background-size: cover !important; 
+/* z-index: ; */
+}
+
+.accordion__button--active{
+    background-color: #fff;
+    color: #777777;
+    border-color: #777777;
+}
+
+.img-roll{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.img-roll-img{
+    max-width: 300px;
+    min-height: 200px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+}
+
+.projects{
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 66px;
+    letter-spacing: 0.035em;
+    text-align: center;
+    color: #000;
+    margin-bottom: 10px;
+}
 
 .VR{
     background-image: url("../img/Vr-bg.png");
     min-height: 100%;
 background-repeat: no-repeat;
-background-attachment: fixed;
+background-attachment: fixed !important;
 background-position: center bottom;
 background-size: cover; 
+
+
 }
 
 .Arduino{
-    background-image: url("../img/Arduino-bg.png");
+    background-image: url("../img/Arduino-bg.png") !important;
     min-height: 100%;
 background-repeat: no-repeat;
-background-attachment: fixed;
+background-attachment: fixed !important;
 background-position: center top;
-background-size: cover; 
+background-size: cover !important; 
 }
 
 .Chatbot{
@@ -607,7 +854,7 @@ background-size: cover;
     width: 5px; /* set width to 5px then set background to lightblue for that width */
     margin: 0 auto; /* center text */
     
-    padding-top: 5rem; /* separate each list with a padding-top of 5rem = 5 x 10px= 50px */
+    padding-top: 3rem; /* separate each list with a padding-top of 5rem = 5 x 10px= 50px */
     background: var(--color-blue);
     font-family: 'Roboto Mono';
     font-style: normal;
@@ -637,8 +884,8 @@ background-size: cover;
 
 /* Content box */
 .timeline-section ul li div {
-    width: 500px;
-    max-height: 80px;
+    width: 430px;
+    min-height: 80px;
     font-size: 1.2rem;
     position: relative;
     bottom: 0;
@@ -680,12 +927,12 @@ background-size: cover;
  
 /*This is to select the divs at even number position so we can separate the divs to the left part*/
 .timeline-section ul li:nth-child(even) div {
-    left: -565px;
+    left: -495px;
 }
 
 .img-hackathon{
     display: block;
-    max-width: 80%;
+    max-width: 70%;
     max-height: 150px;
     border-radius: 30px;
     /* margin-top: 10px; */
@@ -803,13 +1050,13 @@ time {
 
 .footer-list-heading{
     font-family: 'Roboto Mono';
-font-style: normal;
-font-weight: 700;
-font-size: 16px;
-line-height: 21px;
-letter-spacing: 0.035em;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.035em;
 
-color: #FFFFFF;
+    color: #FFFFFF;
 }
 
 .contacts-list-item:not(:last-child){
