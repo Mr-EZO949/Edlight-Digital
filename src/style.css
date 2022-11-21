@@ -1,27 +1,27 @@
 @font-face {
     font-family: 'Roboto Mono';
-    src: url('../fonts/RobotoMono-VariableFont_wght.ttf');
+    src: url('../assets/fonts/RobotoMono-VariableFont_wght.ttf');
 }
 
 @font-face {
     font-family: 'Graphik';
-    src: url('../fonts/GraphikMedium.otf');
+    src: url('../assets/fonts/GraphikMedium.otf');
 }
 
 @font-face {
     font-family: 'Graphik-Regular';
-    src: url('../fonts/GraphikRegular.otf');
+    src: url('../assets/fonts/GraphikRegular.otf');
 }
 
 @font-face {
     font-family: 'Roboto';
-    src: url('../fonts/Roboto-Regular.ttf');
+    src: url('../assets/fonts/Roboto-Regular.ttf');
 }
 
 @font-face {
     font-family: 'Roboto-Italic';
-    src: url('../fonts/Roboto-Italic.ttf');
-}
+    src: url('../assets/fonts/Roboto-Italic.ttf');
+} 
 
 html{
     scroll-behavior: smooth;
@@ -42,6 +42,17 @@ a:visited{
 
 a{
     text-decoration: none;
+}
+
+
+
+.webgl{
+    max-width: 900px;
+    max-height: 900px;
+    margin-left: -100px;
+    overflow-x: hidden;;
+    background-color: transparent !important;
+    border-radius: 50%;
 }
 
 .header{
@@ -99,7 +110,7 @@ a{
     background-repeat: no-repeat;
     border: none;
     background-color: transparent;
-    background-image: url('../img/start-video-button.png');
+    background-image: url('../static/textures/start-video-button.png');
     transition: transform 0.25s ease-in-out;
 }
 
@@ -141,6 +152,7 @@ a{
     display: flex;
     flex-direction: row;
     padding-bottom: 133px;
+    margin-top: -100px;
     align-items: center;
 }
 
@@ -245,6 +257,7 @@ a{
 }
 
 .about-section-content{
+    margin-top: 50px;
     display: flex;
     flex-direction: row;
 }
@@ -357,7 +370,7 @@ a{
     flex-wrap: wrap;
     list-style: none;
     margin-left: -50px;
-    margin-top: 10px;
+    margin-top: 50px;
 }
 
 .team-list-item:not(:nth-child(3n)){
@@ -576,12 +589,14 @@ a{
     justify-content: center;
     align-items: center;
     list-style: none;
+    
+    overflow-x:visible;
 }
 
 .services-list-item{
     position: relative;
-    width: 1920px;
-    overflow-x: hidden;
+    min-width: 100%;
+    /* overflow-x: hidden; */
     /* margin-bottom: 30px; */
     height: 1000px;
     display: flex;
@@ -635,6 +650,10 @@ a{
 }
 
 .accordion__content{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
     margin-top: -50px;
     overflow: hidden;
     max-height: 0px;
@@ -643,13 +662,14 @@ a{
 
 .accordion-content-text{
     /* min-height: 280px; */
+    max-width: 800px;
     font-family: 'Roboto';
-    margin-top: -20px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-style: normal;
     text-align: center;;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 28px;
     line-height: 30px;
     letter-spacing: 0.035em;
     color: #122438;
@@ -662,7 +682,7 @@ a{
     /* background-attachment: fixed; */
     transition-duration: 1s;
     transition-timing-function: ease;
-    transform: scale(0.8);
+    transform: scale(80%);
     border-radius: 20%;
 }
 
@@ -681,7 +701,7 @@ background-attachment: fixed !important;
 /* position: static !important; */
 /* z-index: -1 !important; */
 
-width: 1920px;
+width: 100%;
     overflow-x: hidden;
     /* margin-bottom: 30px; */
     height: 1000px;
@@ -695,7 +715,7 @@ width: 1920px;
 }
 
 .services-list-item--closed .Arduino{
-    background-image: url("../img/Arduino-bg.png") !important;
+    background-image: url("../static/textures/Arduino-bg.png") !important;
     min-height: 100%;
 background-repeat: no-repeat;
 background-attachment: fixed !important;
@@ -711,9 +731,11 @@ background-size: cover !important;
 }
 
 .img-roll{
+    /* max-width: 1000px; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 40px;
 }
 
@@ -722,6 +744,10 @@ background-size: cover !important;
     min-height: 200px;
     margin-bottom: 40px;
     border-radius: 20px;
+}
+
+.img-roll-img:not(:last-child){
+    margin-right: 70px;
 }
 
 .projects{
@@ -737,18 +763,18 @@ background-size: cover !important;
 }
 
 .VR{
-    background-image: url("../img/Vr-bg.png");
+    background-image: url("../static/textures/Vr-bg.png");
     min-height: 100%;
 background-repeat: no-repeat;
 background-attachment: fixed !important;
 background-position: center bottom;
-background-size: cover; 
+background-size: cover !important; 
 
 
 }
 
 .Arduino{
-    background-image: url("../img/Arduino-bg.png") !important;
+    background-image: url("../static/textures/Arduino-bg.png") !important;
     min-height: 100%;
 background-repeat: no-repeat;
 background-attachment: fixed !important;
@@ -757,7 +783,7 @@ background-size: cover !important;
 }
 
 .Chatbot{
-    background-image: url("../img/chatbot-bg.png");
+    background-image: url("../static/textures/chatbot-bg.png");
     min-height: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -766,7 +792,7 @@ background-size: cover !important;
 }
 
 .DataScience{
-    background-image: url("../img/Datascience-bg.png");
+    background-image: url("../static/textures/Datascience-bg.png");
     min-height: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -777,7 +803,7 @@ background-size: cover !important;
 }
 
 .MobileDev{
-    background-image: url("../img/Mobile-bg.png");
+    background-image: url("../static/textures/Mobile-bg.png");
     min-height: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -1231,6 +1257,14 @@ time {
 @media screen and (max-width: 560px){
     .burger-button{
         display: block;
+    }
+    .webgl{
+        max-width: 300px;
+        max-height: 300px;
+        margin:0;
+    }
+    .information-div{
+        padding: 0;
     }
     .navbar{
         display: none;

@@ -5,21 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edlight Digital</title>
-    <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-    <script src="main.js" defer></script>
+    <!-- <link rel="stylesheet" href="assets/css/normalize.css"> -->
+    <!-- <link rel="stylesheet" href="./style.css" type="text/css">  -->
+    <!-- <script src="main.js" defer></script> -->
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="menu-overlay">
-                <img class = "logo" src="assets/img/logo.png" alt="">
+                <img class = "logo" src="/textures/logo.png" alt="logo">
+				<!-- <img class="logo" src="require('../static/asstes/img/logo.png').default"/> -->
                 <nav class = "navbar">
                     <a class="navbar-item hover-underline-animation" href="#about-section-id">ABOUT</a>
-                    <a class="navbar-item hover-underline-animation" href="#team-section-id">TEAM</a>
+                    
                     <a class="navbar-item hover-underline-animation" href="#services-section-id">SERVICES</a>
+					<a class="navbar-item hover-underline-animation" href="#team-section-id">TEAM</a>
                 </nav>
-                <button class="video-button"></button>
+                <button class="video-button "></button>
                 <button class="burger-button"></button>
             </div>
         </div>
@@ -34,8 +36,8 @@
                     <button class="show-more-button" ><a href="#about-section-id">show more</a></button>
                 </div>
                 <div class="animation-div"> 
-                    <img src="./assets/img/animation.png" alt="animation" class="animation">
-                    <!-- Animation will be here -->
+                    <!-- <img src="../static/textures/animation.png" alt="animation" class="animation"> -->
+                    <canvas class="webgl"></canvas>
                 </div>
             </div>
         </div>
@@ -44,7 +46,7 @@
                 <h1 class="main-title about-title">ABOUT</h1>
                 <div class="about-section-content">
                     <div class="about-section-highlights-div">
-                        <img src="./assets/img/about-photo.png" alt="highlights Photo" class="highlights-photo">
+                        <img  alt="" class="highlights-photo" src="/textures/about-photo.png">
                     </div>
                     <div class="about-section-info">
                         <p class="about-description first-description">
@@ -68,12 +70,12 @@
         </div>
         
         <div class="services-section section" id="services-section-id">
-            <div class="container services-container">
+            <div class="services-container">
                 <h1 class="main-title services-title">SERVICES</h1>
                 <div class="services-section-subtitle">
-                    <img src="./assets/img/services-flag.png" alt="">
+                    <img src="/textures/services-flag.png" alt="">
                     <h4 class="services-section-subtitle-text">Areas we are advanced in</h4>
-                    <img src="./assets/img/services-flag.png" alt="">
+                    <img src="/textures/services-flag.png" alt="">
                 </div>     
                 <ul class="services-list">
                     <li class="services-list-item Arduino services-list-item--closed">
@@ -172,20 +174,20 @@
                     <li class="timeline-item">
                         <div class="hackathon">
                             <time>2021 January</time><p>Hackathon #1 Lorembeatae, a quia quaerat ea ullam, animi quod, id eius </p> 
-                            <!-- <img class="img-hackathon" src="./assets/img/Arduino-bg.png" alt=""> -->
-                            <!-- <img class="img-hackathon" src="./assets/img/hackathon-pic1.png" alt=""> -->
+                            <!-- <img class="img-hackathon" src="../static/textures/Arduino-bg.png" alt=""> -->
+                            <!-- <img class="img-hackathon" src="../static/textures/hackathon-pic1.png" alt=""> -->
                         </div>
                     </li>
                     <li class="timeline-item">
                         <div class="hackathon">
                             <time>2021</time><p>IQanat Hackathon for children from villages</p>
-                            <img class="img-hackathon" src="./assets/img/hackathon-pic1.png" alt="">
+                            <img class="img-hackathon" src="/textures/hackathon-pic1.png" alt="">
                         </div>
                     </li>
                     <li>
                         <div class="hackathon">
                           <time>2004</time><p>Lorem ipsum dolor sit amet consectetur a</p> 
-                          <!-- <img class="img-hackathon" src="./assets/img/hackathon-pic1.png" alt=""> -->
+                          <!-- <img class="img-hackathon" src="../static/textures/hackathon-pic1.png" alt=""> -->
                         </div>
                     </li>
                 </ul>
@@ -197,14 +199,14 @@
 					<div class="weird-circles margin-circle"></div>
 					<div class="weird-circles"></div>
                     <h1 class="main-title team-title">TEAM</h1>
-                    <h5 class="team-subtitle">Professionals in their field</h3>
+                    <h5 class="team-subtitle">Professionals in their field</h5>
 					<div class="weird-circles margin-circle"></div>
 					<div class="weird-circles"></div>
                 </div>
                 <ul class="team-list">
                     <li class="team-list-item">
                         <div class="trainer-avatar">
-                            <img class="team-list-item-avatar" src="./assets/img/trainer-photo.png" alt=""/>
+                            <img class="team-list-item-avatar" src="/textures/trainer-photo.png" alt=""/>
                             <div class="trainer-avatar-content">
                                 <div class="trainer-avatar-text">
                                     <h4 class="team-list-item-name">Akhyn Zhaksylyk</h4>
@@ -218,7 +220,7 @@
                     
                     <li class="team-list-item">
                         <div class="trainer-avatar">
-                            <img class="team-list-item-avatar" src="./assets/img/trainer-photo-5.png" alt=""/>
+                            <img class="team-list-item-avatar" src="/textures/trainer-photo-5.png" alt=""/>
                             <div class="trainer-avatar-content">
                                 <div class="trainer-avatar-text">
                                     <h4 class="team-list-item-name">Zholgeldiev Zhanbolat</h4>
@@ -231,7 +233,7 @@
                     </li>
                     <li class="team-list-item">
                         <div class="trainer-avatar">
-                            <img class="team-list-item-avatar" src="./assets/img/trainer-photo.png" alt=""/>
+                            <img class="team-list-item-avatar" src="/textures/trainer-photo.png" alt=""/>
                             <div class="trainer-avatar-content">
                                 <div class="trainer-avatar-text">
                                     <h4 class="team-list-item-name">Kulboldin Daniyar</h4>
@@ -243,7 +245,7 @@
                     </li>
                     <li class="team-list-item">
                         <div class="trainer-avatar">
-                            <img class="team-list-item-avatar" src="./assets/img/trainer-photo-2.png" alt=""/>
+                            <img class="team-list-item-avatar" src="/textures/trainer-photo-2.png" alt=""/>
                             <div class="trainer-avatar-content">
                                 <div class="trainer-avatar-text">
                                     <h4 class="team-list-item-name">Maksat Tulegenov</h4>
@@ -255,7 +257,7 @@
                     </li>
                     <li class="team-list-item">
                         <div class="trainer-avatar">
-                            <img class="team-list-item-avatar" src="./assets/img/trainer-photo-2.png" alt=""/>
+                            <img class="team-list-item-avatar" src="/textures/trainer-photo-2.png" alt=""/>
                             <div class="trainer-avatar-content">
                                 <div class="trainer-avatar-text">
                                     <h4 class="team-list-item-name">Sakimov Ilyas</h4>
@@ -267,7 +269,7 @@
                     </li>
                     <li class="team-list-item">
                         <div class="trainer-avatar">
-                            <img class="team-list-item-avatar" src="./assets/img/trainer-photo.png" alt=""/>
+                            <img class="team-list-item-avatar" src="/textures/trainer-photo.png" alt=""/>
                             <div class="trainer-avatar-content">
                                 <div class="trainer-avatar-text">
                                     <h4 class="team-list-item-name">Myrzatov Murat</h4>
@@ -280,22 +282,22 @@
                 </ul>
                 <ul class="team-list-mobile">
                     <li class="mobile-team-list-item">
-                        <img class="team-list-item-avatar-mobile" src="./assets/img/trainer-photo.png" alt=""/>
+                        <img class="team-list-item-avatar-mobile" src="/textures/trainer-photo.png" alt=""/>
                         <h4 class="team-list-item-name-mobile">Akhyn Zhaksylyk</h4>
                         <h5 class="team-list-item-field-mobile">Arduino trainer</h5>
                     </li>
                     <li class="mobile-team-list-item">
-                        <img class="team-list-item-avatar-mobile" src="./assets/img/trainer-photo.png" alt=""/>
+                        <img class="team-list-item-avatar-mobile" src="/textures/trainer-photo.png" alt=""/>
                         <h4 class="team-list-item-name-mobile">Akhyn Zhaksylyk</h4>
                         <h5 class="team-list-item-field-mobile">Arduino trainer</h5>
                     </li>
                     <li class="mobile-team-list-item">
-                        <img class="team-list-item-avatar-mobile" src="./assets/img/trainer-photo.png" alt=""/>
+                        <img class="team-list-item-avatar-mobile" src="/textures/trainer-photo.png" alt=""/>
                         <h4 class="team-list-item-name-mobile">Akhyn Zhaksylyk</h4>
                         <h5 class="team-list-item-field-mobile">Arduino trainer</h5>
                     </li>
                     <li class="mobile-team-list-item">
-                        <img class="team-list-item-avatar-mobile" src="./assets/img/trainer-photo.png" alt=""/>
+                        <img class="team-list-item-avatar-mobile" src="/textures/trainer-photo.png" alt=""/>
                         <h4 class="team-list-item-name-mobile">Akhyn Zhaksylyk</h4>
                         <h5 class="team-list-item-field-mobile">Arduino trainer</h5>
                     </li>
